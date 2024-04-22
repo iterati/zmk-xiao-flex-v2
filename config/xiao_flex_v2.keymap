@@ -56,7 +56,7 @@
             bindings = <
 &none            &none       &kp C_VOL_UP   &kp UP          &kp C_VOL_DN     &kp C_MUTE    &none       &none           &none         &none           &none          &none
 &none            &kp LGUI    &mt LALT LEFT  &mt LCTRL DOWN  &kp LSHFT RIGHT  &none         &kp LEFT    &kp DOWN        &kp UP        &kp RIGHT       &kp CAPS       &none
-&none            &none       &none          &none           &none            &non          &kp HOME    &kp PG_DN       &kp PG_UP     &kp END         &kp DEL        &none
+&none            &none       &none          &none           &none            &none         &kp HOME    &kp PG_DN       &kp PG_UP     &kp END         &kp DEL        &none
                                             &none           &none            &none         &kp RET     &kp SPACE       &kp BSPC
             >;
         };
