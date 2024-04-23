@@ -18,10 +18,10 @@
 
         default_layer {
             bindings = <
-&rgb_ug RGB_TOG  &kp Q       &kp W       &kp F        &kp P        &kp B         &kp J      &kp L        &kp U        &kp Y       &kp SEMI    &kp BSLH
-&kp DQT          &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G         &kp M      &mt LSHFT N  &mt LCTRL E  &mt LALT I  &lt LGUI O  &kp SQT
-&kp LSHFT        &kp Z       &kp X       &kp C        &kp D        &kp V         &kp K      &kp H        &kp COMMA    &kp DOT     &kp FSLH    &kp LSHFT
-                                         &kp ESC      &lt 4 SPACE  &lt 3 BSPC    &lt 2 RET  &lt 1 SPACE  &kp BSPC
+&rgb_ug RGB_TOG  &kp Q       &kp W           &kp F        &kp P        &kp B      &kp J    &kp L            &kp U        &kp Y       &kp SEMI        &kp BSLH
+&kp DQT          &mt LGUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G      &kp M    &mt LSHFT N      &mt LCTRL E  &mt LALT I  &mt LEFT_GUI O  &kp SQT
+&kp LSHFT        &kp Z       &kp X           &kp C        &kp D        &kp V      &kp K    &kp H            &kp COMMA    &kp DOT     &kp FSLH        &kp LSHFT
+                                             &lt 4 SPACE  &lt 3 ESC    &kp TAB    &kp RET  &lt 2 BACKSPACE  &lt 1 RET
             >;
         };
 
@@ -36,10 +36,10 @@
 
         layer_2 {
             bindings = <
-&rgb_ug RGB_EFF  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN    &none  &none      &none      &none     &none  &none
-&rgb_ug RGB_BRI  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &none  &none
-&rgb_ug RGB_BRD  &kp F10  &kp F1  &kp F2  &kp F3  &none        &none  &kp PG_DN  &kp PG_UP  &kp END   &none  &none
-                                  &none   &none   &none        &none  &none      &none
+&rgb_ug RGB_EFF  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN    &none     &none      &none      &none     &none         &none
+&rgb_ug RGB_BRI  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK     &none     &kp LSHFT  &kp LCTRL  &kp LALT  &kp LEFT_GUI  &none
+&rgb_ug RGB_BRD  &kp F10  &kp F1  &kp F2  &kp F3  &none        &kp HOME  &kp PG_DN  &kp PG_UP  &kp END   &none         &none
+                                  &none   &none   &none        &none     &none      &none
             >;
         };
 
