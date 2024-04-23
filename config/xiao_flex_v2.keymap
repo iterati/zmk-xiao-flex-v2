@@ -30,6 +30,8 @@
                 <&kp LEFT_PARENTHESIS>,
                 <&kp LEFT_BRACE>,
                 <&kp LEFT_BRACKET>;
+
+            tapping-term-ms = <300>;
         };
 
         close_brace: close_brace {
@@ -57,10 +59,10 @@
 
         num {
             bindings = <
-&rgb_ug RGB_TOG  &kp LBKT       &kp N7  &kp N8     &kp N9  &kp RBKT      &kp LG(LS(Z))  &kp LG(X)       &kp LG(C)     &kp LG(V)       &kp LG(Z)  &none
-&rgb_ug RGB_EFF  &kp SEMICOLON  &kp N4  &kp N5     &kp N6  &kp EQUAL     &kp LEFT       &mt LSHFT DOWN  &mt LCTRL UP  &mt LALT RIGHT  &kp LGUI   &none
-&rgb_ug RGB_HUI  &kp GRAVE      &kp N1  &kp N2     &kp N3  &kp BSLH      &kp HOME       &kp PG_DN       &kp PG_UP     &kp END         &kp CAPS   &none
-                                        &kp MINUS  &kp N0  &kp KP_DOT    &none          &none           &none
+&rgb_ug RGB_TOG  &kp LBKT       &kp N7  &kp N8   &kp N9     &kp RBKT     &kp LG(LS(Z))  &kp LG(X)       &kp LG(C)     &kp LG(V)       &kp LG(Z)  &none
+&rgb_ug RGB_EFF  &kp SEMICOLON  &kp N4  &kp N5   &kp N6     &kp EQUAL    &kp LEFT       &mt LSHFT DOWN  &mt LCTRL UP  &mt LALT RIGHT  &kp LGUI   &none
+&rgb_ug RGB_HUI  &kp GRAVE      &kp N1  &kp N2   &kp N3     &kp BSLH     &kp HOME       &kp PG_DN       &kp PG_UP     &kp END         &kp CAPS   &none
+                                        &kp DOT  &kp MINUS  &kp N0       &none          &none           &none
             >;
         };
 
