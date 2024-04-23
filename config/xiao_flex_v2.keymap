@@ -7,48 +7,78 @@
 #include <dt-bindings/led/led.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        gaming_layer: gaming_layer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 5 &rgb_ug RGB_COLOR_HSB(0,93,30)>;
+            label = "GAMING_LAYER";
+        };
+    };
+
+    behaviors {
+        open_brace: open_brace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "OPEN_BRACE";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_PARENTHESIS>,
+                <&kp LEFT_BRACE>,
+                <&kp LEFT_BRACKET>;
+        };
+
+        close_brace: close_brace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CLOSE_BRACE";
+            #binding-cells = <0>;
+            bindings =
+                <&kp RIGHT_PARENTHESIS>,
+                <&kp RIGHT_BRACE>,
+                <&kp RIGHT_BRACKET>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        base {
             bindings = <
-&rgb_ug RGB_TOG  &kp Q       &kp W           &kp F        &kp P        &kp B          &kp J      &kp L        &kp U            &kp Y       &kp SEMI        &kp BSLH
-&kp DQT          &mt LGUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M      &mt LSHFT N  &mt LCTRL E      &mt LALT I  &mt LEFT_GUI O  &kp SQT
-&kp LSHFT        &kp Z       &kp X           &kp C        &kp D        &kp V          &kp K      &kp H        &kp COMMA        &kp DOT     &kp FSLH        &kp LSHFT
-                                             &kp TAB      &lt 3 ESC    &lt 4 SPACE    &kp SPACE  &lt 2 RET    &lt 1 BACKSPACE
+&kp ESC      &kp Q       &kp W           &kp F        &kp P        &kp B          &kp J      &kp L        &kp U            &kp Y       &kp SEMI        &kp BSLH
+&kp DQT      &mt LGUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M      &mt LSHFT N  &mt LCTRL E      &mt LALT I  &mt LEFT_GUI O  &kp SQT
+&open_brace  &kp Z       &kp X           &kp C        &kp D        &kp V          &kp K      &kp H        &kp COMMA        &kp DOT     &kp FSLH        &caps_word
+                                         &kp TAB      &lt 3 ESC    &lt 4 SPACE    &kp SPACE  &lt 2 RET    &lt 1 BACKSPACE
             >;
         };
 
-        layer_1 {
+        num {
             bindings = <
-&bt BT_SEL 0  &kp LBKT       &kp N7  &kp N8     &kp N9  &kp RBKT      &kp LG(LS(Z))  &kp LG(X)       &kp LG(C)     &kp LG(V)       &kp LG(Z)  &none
-&bt BT_SEL 1  &kp SEMICOLON  &kp N4  &kp N5     &kp N6  &kp EQUAL     &kp LEFT       &mt LSHFT DOWN  &mt LCTRL UP  &mt LALT RIGHT  &kp LGUI   &none
-&none         &kp GRAVE      &kp N1  &kp N2     &kp N3  &kp BSLH      &kp HOME       &kp PG_DN       &kp PG_UP     &kp END         &kp CAPS   &none
-                                     &kp MINUS  &kp N0  &kp KP_DOT    &none          &none           &none
+&rgb_ug RGB_TOG  &kp LBKT       &kp N7  &kp N8     &kp N9  &kp RBKT      &kp LG(LS(Z))  &kp LG(X)       &kp LG(C)     &kp LG(V)       &kp LG(Z)  &none
+&rgb_ug RGB_EFF  &kp SEMICOLON  &kp N4  &kp N5     &kp N6  &kp EQUAL     &kp LEFT       &mt LSHFT DOWN  &mt LCTRL UP  &mt LALT RIGHT  &kp LGUI   &none
+&rgb_ug RGB_HUI  &kp GRAVE      &kp N1  &kp N2     &kp N3  &kp BSLH      &kp HOME       &kp PG_DN       &kp PG_UP     &kp END         &kp CAPS   &none
+                                        &kp MINUS  &kp N0  &kp KP_DOT    &none          &none           &none
             >;
         };
 
-        layer_2 {
+        fn {
             bindings = <
-&rgb_ug RGB_EFF  &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN    &kp LG(LS(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)     &none
+&gaming_layer    &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN    &kp LG(LS(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)     &none
 &rgb_ug RGB_BRI  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK     &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LEFT_GUI  &none
 &rgb_ug RGB_BRD  &kp F10  &kp F1  &kp F2  &kp F3  &none        &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &none         &none
                                   &none   &none   &none        &none          &none      &none
             >;
         };
 
-        layer_3 {
+        mouse {
             bindings = <
-&none  &none     &none     &none      &none      &none    &kp LS(LG(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)  &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &none      &none
-&none  &none     &none     &none      &none      &none    &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &none      &none
-                           &none      &none      &none    &mkp LCLK      &mkp RCLK  &mkp MCLK
+&none  &none     &none     &none      &none      &rgb_ug RGB_TOG    &kp LS(LG(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)  &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none              &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &none      &none
+&none  &none     &none     &none      &none      &none              &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &none      &none
+                           &none      &none      &none              &mkp LCLK      &mkp RCLK  &mkp MCLK
             >;
         };
 
@@ -58,6 +88,16 @@
 &rgb_ug RGB_SPD  &kp LGUI  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &none         &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &none
 &none            &none     &none          &none           &none            &none         &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &kp DEL    &none
                                           &none           &none            &none         &kp SPACE      &kp RET    &kp BSPC
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E      &kp R      &kp T       &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D      &kp F      &kp G       &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp CAPS
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V      &kp B       &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &to 0
+                         &kp SPACE  &kp LCTRL  &kp LALT    &kp SPACE  &kp ENTER  &kp LGUI
+                                    &none      &none       &none      &none
             >;
         };
     };
