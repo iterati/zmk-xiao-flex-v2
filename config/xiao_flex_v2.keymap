@@ -42,6 +42,8 @@
                 <&kp RIGHT_PARENTHESIS>,
                 <&kp RIGHT_BRACE>,
                 <&kp RIGHT_BRACKET>;
+
+            tapping-term-ms = <300>;
         };
     };
 
@@ -50,10 +52,10 @@
 
         base {
             bindings = <
-&kp ESC      &kp Q       &kp W           &kp F        &kp P        &kp B          &kp J      &kp L        &kp U            &kp Y       &kp SEMI        &kp BSLH
-&kp DQT      &mt LGUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M      &mt LSHFT N  &mt LCTRL E      &mt LALT I  &mt LEFT_GUI O  &kp SQT
-&open_brace  &kp Z       &kp X           &kp C        &kp D        &kp V          &kp K      &kp H        &kp COMMA        &kp DOT     &kp FSLH        &caps_word
-                                         &kp TAB      &lt 3 ESC    &lt 4 SPACE    &kp SPACE  &lt 2 RET    &lt 1 BACKSPACE
+&kp ESC      &kp Q       &kp W           &kp F        &kp P        &kp B              &kp J       &kp L        &kp U        &kp Y       &kp SEMI        &kp BSLH
+&kp DQT      &mt LGUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LSHFT T  &kp G              &kp M       &mt LSHFT N  &mt LCTRL E  &mt LALT I  &mt LEFT_GUI O  &kp SQT
+&open_brace  &kp Z       &kp X           &kp C        &kp D        &kp V              &kp K       &kp H        &kp COMMA    &kp DOT     &kp FSLH        &close_brace
+                                         &kp TAB      &lt 3 ESC    &lt 4 BACKSPACE    &caps_word  &lt 2 RET    &lt 1 SPACE
             >;
         };
 
