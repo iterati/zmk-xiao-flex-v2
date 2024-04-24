@@ -13,7 +13,7 @@
 
 / {
     macros {
-        gaming_layer: gaming_layer {
+        gameon: gaming_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&to 5 &rgb_ug RGB_COLOR_HSB(0,93,30)>;
@@ -22,9 +22,9 @@
     };
 
     behaviors {
-        open_brace: open_brace {
+        bro: bro {
             compatible = "zmk,behavior-tap-dance";
-            label = "OPEN_BRACE";
+            label = "BRO";
             #binding-cells = <0>;
             bindings =
                 <&kp LEFT_PARENTHESIS>,
@@ -34,9 +34,9 @@
             tapping-term-ms = <300>;
         };
 
-        close_brace: close_brace {
+        brc: brc {
             compatible = "zmk,behavior-tap-dance";
-            label = "CLOSE_BRACE";
+            label = "BRC";
             #binding-cells = <0>;
             bindings =
                 <&kp RIGHT_PARENTHESIS>,
@@ -75,15 +75,39 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <16 19>;
+        };
+
+        paro {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <15 20>;
+        };
+
+        veco {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <14 21>;
+        };
+
+        mapo {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <13 22>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-&kp ESC      &kp Q            &kp W            &kp F         &kp P              &kp B              &kp J       &kp L              &kp U         &kp Y            &kp SEMI         &kp BSLH
-&kp DQT      &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G              &kp M       &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
-&open_brace  &kp Z            &kp X            &kp C         &kp D              &kp V              &kp K       &kp H              &kp COMMA     &kp DOT          &kp FSLH         &close_brace
-                                               &kp ESC       &lt 3 TAB          &lt 4 BACKSPACE    &caps_word  &lt 2 RET          &lt 1 SPACE
+&kp ESC  &kp Q            &kp W            &kp F         &kp P              &kp B              &kp J       &kp L              &kp U         &kp Y            &kp SEMI         &kp BSLH
+&kp DQT  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G              &kp M       &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
+&bro     &kp Z            &kp X            &kp C         &kp D              &kp V              &kp K       &kp H              &kp COMMA     &kp DOT          &kp FSLH         &brc
+                                           &kp ESC       &lt 3 TAB          &lt 4 BACKSPACE    &caps_word  &lt 2 RET          &lt 1 SPACE
             >;
         };
 
@@ -98,7 +122,7 @@
 
         fn {
             bindings = <
-&gaming_layer    &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN    &kp LG(LS(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)     &none
+&gameon          &kp F12  &kp F7  &kp F8  &kp F9  &kp PSCRN    &kp LG(LS(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)     &none
 &rgb_ug RGB_BRI  &kp F11  &kp F4  &kp F5  &kp F6  &kp SLCK     &none          &kp LSHFT  &kp LCTRL  &kp LALT   &kp LEFT_GUI  &none
 &rgb_ug RGB_BRD  &kp F10  &kp F1  &kp F2  &kp F3  &none        &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &none         &none
                                   &none   &none   &none        &none          &none      &none
@@ -116,7 +140,7 @@
 
         layer_4 {
             bindings = <
-&rgb_ug RGB_SPI  &none     &kp C_VOL_UP   &kp UP          &kp C_VOL_DN     &kp C_MUTE    &kp LS(LG(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)  &none
+&rgb_ug RGB_SPI  &none     &kp C_VOL_DN   &kp UP          &kp C_VOL_UP     &kp C_MUTE    &kp LS(LG(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)  &none
 &rgb_ug RGB_SPD  &kp LGUI  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &none         &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &none
 &none            &none     &none          &none           &none            &none         &kp HOME       &kp PG_DN  &kp PG_UP  &kp END    &kp DEL    &none
                                           &none           &none            &none         &kp SPACE      &kp RET    &kp BSPC
