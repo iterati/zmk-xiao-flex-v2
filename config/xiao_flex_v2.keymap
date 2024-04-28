@@ -113,29 +113,9 @@
     combos {
         compatible = "zmk,combos";
 
-        capsword {
-            bindings = <&caps_word>;
-            key-positions = <16 19>;
-        };
-
         paro {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <3 4>;
-        };
-
-        veco {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <2 4>;
-        };
-
-        mapo {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <1 4>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <38 41>;
         };
 
         parc {
@@ -143,9 +123,19 @@
             key-positions = <7 8>;
         };
 
+        veco {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <2 4>;
+        };
+
         vecc {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 9>;
+        };
+
+        mapo {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <1 4>;
         };
 
         mapc {
@@ -153,14 +143,19 @@
             key-positions = <7 10>;
         };
 
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <16 19>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <38 41>;
+        };
+
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <28 31>;
-        };
-
-        back_to_base {
-            bindings = <&to 0>;
-            key-positions = <36 39>;
         };
     };
 
