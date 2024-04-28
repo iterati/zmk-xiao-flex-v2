@@ -150,7 +150,7 @@
 
         esc {
             bindings = <&kp ESC>;
-            key-positions = <38 41>;
+            key-positions = <41 36>;
         };
 
         underscore {
@@ -164,10 +164,10 @@
 
         base {
             bindings = <
-&kp ESC  &kp Q            &kp W            &kp F         &kp P           &kp B              &kp J       &kp L           &kp U         &kp Y            &kp SEMI         &kp BSLH
-&kp DQT  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hmls LSHIFT T  &kp G              &kp M       &hmrs LSHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
-&bro     &kp Z            &kp X            &kp C         &kp D           &kp V              &kp K       &kp H           &kp COMMA     &kp DOT          &kp FSLH         &brc
-                                           &kp ESC       &lt 3 TAB       &lt 4 BACKSPACE    &caps_word  &lt 2 RET       &lt 1 SPACE
+&kp ESC  &kp Q            &kp W            &kp F            &kp P           &kp B      &kp J       &kp L           &kp U         &kp Y            &kp SEMI         &kp BSLH
+&kp DQT  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S     &hmls LSHIFT T  &kp G      &kp M       &hmrs LSHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
+&bro     &kp Z            &kp X            &kp C            &kp D           &kp V      &kp K       &kp H           &kp COMMA     &kp DOT          &kp FSLH         &brc
+                                           &lt 4 BACKSPACE  &lt 3 TAB       &kp ESC    &caps_word  &lt 2 RET       &lt 1 SPACE
             >;
         };
 
@@ -198,7 +198,7 @@
             >;
         };
 
-        layer_4 {
+        nav {
             bindings = <
 &rgb_ug RGB_SPI  &none     &kp C_VOL_DN   &kp UP          &kp C_VOL_UP     &kp C_MUTE    &kp LS(LG(Z))  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(Z)  &none
 &rgb_ug RGB_SPD  &kp LGUI  &mt LALT LEFT  &mt LCTRL DOWN  &mt LSHFT RIGHT  &none         &kp LEFT       &kp DOWN   &kp UP     &kp RIGHT  &kp CAPS   &none
