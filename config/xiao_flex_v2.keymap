@@ -102,24 +102,29 @@
             key-positions = <3 4>;
         };
 
-        parc {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 8>;
-        };
-
         veco {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <2 4>;
         };
 
-        vecc {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <7 9>;
-        };
-
         mapo {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <1 4>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <4 7>;
+        };
+
+        parc {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <7 8>;
+        };
+
+        vecc {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <7 9>;
         };
 
         mapc {
@@ -130,11 +135,6 @@
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <28 31>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
-            key-positions = <4 7>;
         };
 
         capsword {
