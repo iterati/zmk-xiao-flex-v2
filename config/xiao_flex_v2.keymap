@@ -17,6 +17,12 @@
     tapping-term-ms = <280>;
 };
 
+&mt {
+    tapping-term-ms = <280>;
+    quick-tap-ms = <225>;
+    flavor = "balanced";
+};
+
 / {
     behaviors {
         bro: bro {
@@ -173,10 +179,10 @@
 
         gaming {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E      &kp R        &kp T             &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB    &kp A  &kp S  &kp D      &kp F        &kp G             &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V        &kp B             &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                         &kp SPACE  &lt 7 LCTRL  &lt 6 LC(LALT)    &kp LGUI  &kp ENTER  &kp SPACE
+&kp ESC    &kp Q  &kp W  &kp E        &kp R        &kp T           &kp Y     &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D        &kp F        &kp G           &kp H     &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C        &kp V        &kp B           &kp N     &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                         &lt 6 SPACE  &lt 7 LCTRL  &kp LEFT_ALT    &kp LGUI  &kp ENTER  &kp SPACE
             >;
         };
 
@@ -227,10 +233,10 @@
 
         gaming_nav {
             bindings = <
-&kp ESC    &kp F5    &kp PG_DN  &kp UP    &kp PG_UP  &kp C_MUTE      &none  &none  &none  &none  &none  &none
-&kp LSHFT  &kp F6    &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_UP    &none  &none  &none  &none  &none  &none
-&kp LCTRL  &kp LALT  &kp END    &kp RET   &kp HOME   &kp C_VOL_DN    &none  &none  &none  &none  &none  &none
-                                &none     &none      &none           &none  &none  &none
+&kp ESC        &kp F5    &kp PG_DN  &kp UP    &kp PG_UP  &kp C_MUTE      &none  &none  &none  &none  &none  &none
+&kp TAB        &kp F6    &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_UP    &none  &none  &none  &none  &none  &none
+&kp LS(LCTRL)  &kp LALT  &kp END    &kp RET   &kp HOME   &kp C_VOL_DN    &none  &none  &none  &none  &none  &none
+                                    &none     &none      &none           &none  &none  &none
             >;
         };
     };
