@@ -226,19 +226,19 @@
 
         gaming_num {
             bindings = <
-&kp F4     &kp F1  &kp N7        &kp N8        &kp N9        &kp EQUAL       &none  &none  &none  &none  &none  &none
-&kp LCTRL  &kp F2  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0    &none  &none  &none  &none  &none  &none
-&kp LSHFT  &kp F3  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD      &none  &none  &none  &none  &none  &none
-                                 &none         &none         &none           &none  &none  &none
+&kp ESCAPE  &kp F1  &kp N7        &kp N8        &kp N9        &kp EQUAL       &none  &none  &none  &none  &none  &none
+&kp LCTRL   &kp F2  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NUMBER_0    &none  &none  &none  &none  &none  &none
+&kp LSHFT   &kp F3  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD      &none  &none  &none  &none  &none  &none
+                                  &none         &none         &kp LALT        &none  &none  &none
             >;
         };
 
         gaming_nav {
             bindings = <
 &kp ESC    &kp F5    &kp PG_DN  &kp UP    &kp PG_UP  &kp C_MUTE      &none  &none  &none  &none  &none  &none
-&kp TAB    &kp F6    &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_UP    &none  &none  &none  &none  &none  &none
+&kp LCTRL  &kp F6    &kp LEFT   &kp DOWN  &kp RIGHT  &kp C_VOL_UP    &none  &none  &none  &none  &none  &none
 &kp LSHFT  &kp LALT  &kp END    &kp RET   &kp HOME   &kp C_VOL_DN    &none  &none  &none  &none  &none  &none
-                                &none     &none      &none           &none  &none  &none
+                                &none     &none      &kp LALT        &none  &none  &none
             >;
         };
     };
